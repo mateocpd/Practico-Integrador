@@ -3,6 +3,7 @@ import AddTask from "./components/TaskForm/AddTask.jsx";
 import TaskList from "./components/TaskList/TaskList.jsx";
 import { useState, useEffect } from "react";
 
+
 function App() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || [
@@ -46,6 +47,7 @@ function App() {
         onDelete={handleDelete}
       />
       <AddTask onAdd={handleAddTask}/>
+      
     </>
   );
 }

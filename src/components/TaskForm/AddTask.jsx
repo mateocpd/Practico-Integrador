@@ -1,4 +1,20 @@
 import  { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const mensaje  = () => {
+  toast.success('Se ha creado la tarea', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+    
+}
 
 const AddTask = ({ onAdd }) => {
   const [taskName, setTaskName] = useState("");
@@ -29,7 +45,8 @@ const AddTask = ({ onAdd }) => {
         onChange={handleInputChange}
         placeholder="Añadir nueva tarea..."
       />
-      <button type="submit">Agregar</button>
+      <button type="submit" onClick={mensaje}>Agregar</button>
+      <ToastContainer />
     </form>
   );
 };

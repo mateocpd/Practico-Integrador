@@ -1,4 +1,4 @@
-const TaskItem = ({ task, onComplete, onDelete }) => {
+const TaskItem = ({ task, onComplete, onDelete, onAlert }) => {
     return (
       <div>
         <input
@@ -9,7 +9,10 @@ const TaskItem = ({ task, onComplete, onDelete }) => {
         <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
           {task.title}
         </span>
-        <button onClick={() => onDelete(task.id)}>Eliminar</button>
+        <button onClick={() => {
+          onAlert(task.title);
+           onDelete(task.id);
+           }}>Eliminar</button>
       </div>
     );
   };
