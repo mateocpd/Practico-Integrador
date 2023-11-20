@@ -1,0 +1,7 @@
+.tarea{
+    border: ridge;
+    padding: 5px;
+    border-radius: 2rem;
+    border-color: rgba(116, 37, 25, 0.712);
+    margin-bottom: 10px;
+}

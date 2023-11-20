@@ -1,6 +1,8 @@
+import './TaskItem.css'
+
 const TaskItem = ({ task, onComplete, onDelete, onAlert }) => {
     return (
-      <div>
+      <div className="tarea">
         <input
           type="checkbox"
           checked={task.completed}

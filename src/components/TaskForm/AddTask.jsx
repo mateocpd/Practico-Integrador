@@ -1,20 +1,8 @@
 import  { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './AddTask.css';
 
-const mensaje  = () => {
-  toast.success('Se ha creado la tarea', {
-    position: "top-center",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-    });
-    
-}
 
 const AddTask = ({ onAdd }) => {
   const [taskName, setTaskName] = useState("");
@@ -34,19 +22,29 @@ const AddTask = ({ onAdd }) => {
       };
       onAdd(newTask);
       setTaskName(""); //limpiar campo de entrada despues de agregar la tarea
+      toast.success('Se ha creado la tarea!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}  className="form">
       <input
         type="text"
         value={taskName}
         onChange={handleInputChange}
         placeholder="Añadir nueva tarea..."
       />
-      <button type="submit" onClick={mensaje}>Agregar</button>
-      <ToastContainer />
+      <button type="submit">Agregar</button>
+      
     </form>
   );
 };

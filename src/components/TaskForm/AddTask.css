@@ -1,0 +1,9 @@
+.form{
+    border: ridge;
+    border-radius: 2rem;
+    padding: 5px;
+    width: 101%;
+    border-color: rgba(116, 37, 25, 0.712);
+    border-spacing: 1re;
+    margin-bottom: 10px;
+}
