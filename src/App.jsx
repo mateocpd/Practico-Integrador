@@ -7,10 +7,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || [
-      { id: 1, nombre: "Hacer la compra", completed: false },
-      { id: 2, nombre: "Estudiar para el examen", completed: false },
-      { id: 3, nombre: "Salir a correr", completed: false },
-      { id: 4, nombre: "tarea azar", completed: false },
+      
     ]
   );
 

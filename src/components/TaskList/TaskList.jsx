@@ -1,8 +1,11 @@
 import TaskItem from "../TaskItem/TaskItem";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './TaskList.css'
 
 const TaskList = ({ tasks, onComplete, onDelete }) => {
+  const incompleteTasks = tasks.filter(task => !task.completed);
+  const completedTasks = tasks.filter(task => task.completed);
 
   const mensajeBorrado = () => {
     toast.error('Se ha eliminado la tarea', {
@@ -21,7 +24,9 @@ const TaskList = ({ tasks, onComplete, onDelete }) => {
     }
     return (
       <div>
-        {tasks.map((task) => (
+      <div className="incomplete-tasks">
+        <h2>Tareas incompletas:</h2>
+        {incompleteTasks.map((task) => (
           <TaskItem
             key={task.id}
             task={task}
@@ -30,8 +35,22 @@ const TaskList = ({ tasks, onComplete, onDelete }) => {
             onAlert={mensajeBorrado}
           />
         ))}
-        <ToastContainer />
+                <ToastContainer />
       </div>
+      <div className="complete-tasks">
+        <h2>Tareas completadas:</h2>
+        {completedTasks.map((task) => (
+          <TaskItem
+            key={task.id}
+            task={task}
+            onComplete={onComplete}
+            onDelete={onDelete}
+            onAlert={mensajeBorrado}
+            />
+            ))}
+            <ToastContainer />
+      </div>
+    </div>
     );
   };
 
