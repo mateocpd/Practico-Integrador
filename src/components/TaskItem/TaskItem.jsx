@@ -7,7 +7,7 @@ const TaskItem = ({ task, onComplete, onDelete, onAlert }) => {
           type="checkbox"
           checked={task.completed}
           onChange={() => onComplete(task.id)}
-        />
+          />
         <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
           {task.title}
         </span>

@@ -23,7 +23,7 @@ const TaskList = ({ tasks, onComplete, onDelete }) => {
       return <div>No hay tareas disponibles</div>;
     }
     return (
-      <div>
+      <div className="pop">
       <div className="incomplete-tasks">
         <h2>Tareas incompletas:</h2>
         {incompleteTasks.map((task) => (

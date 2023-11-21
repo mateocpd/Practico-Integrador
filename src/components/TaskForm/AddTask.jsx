@@ -37,6 +37,7 @@ const AddTask = ({ onAdd }) => {
 
   return (
     <form onSubmit={handleSubmit}  className="form">
+      <p className="texto">Agregar nueva tarea</p>
       <input
         type="text"
         value={taskName}

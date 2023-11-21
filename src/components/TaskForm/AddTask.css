@@ -1,5 +1,4 @@
 .form{
-   
     padding: 5px;
     width: 101%;
     border-color: rgba(116, 37, 25, 0.712);
@@ -9,5 +8,8 @@
 input{
     background-color: rgba(69, 9, 124, 0.356);
     outline: hidden;
-    
+}
+.texto{
+    margin-right: 120px ;
+    margin-bottom: -10px;
 }
