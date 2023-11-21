@@ -2,7 +2,7 @@ import './TaskItem.css'
 
 const TaskItem = ({ task, onComplete, onDelete, onAlert }) => {
     return (
-      <div className="tarea">
+      <div className="tarea animate__animated animate__bounce">
         <input
           type="checkbox"
           checked={task.completed}
@@ -11,7 +11,7 @@ const TaskItem = ({ task, onComplete, onDelete, onAlert }) => {
         <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
           {task.title}
         </span>
-        <button onClick={() => {
+        <button  onClick={() => {
           onAlert(task.title);
            onDelete(task.id);
            }}>Eliminar</button>

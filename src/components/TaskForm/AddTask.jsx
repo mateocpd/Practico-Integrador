@@ -33,6 +33,19 @@ const AddTask = ({ onAdd }) => {
         theme: "light",
         });
     }
+
+    else {
+      toast.warn('Debe completar el campo', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
   };
 
   return (

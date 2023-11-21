@@ -2,6 +2,8 @@ import "./App.css";
 import AddTask from "./components/TaskForm/AddTask.jsx";
 import TaskList from "./components/TaskList/TaskList.jsx";
 import { useState, useEffect } from "react";
+import 'animate.css';
+
 
 
 function App() {

@@ -1,7 +1,8 @@
 import TaskItem from "../TaskItem/TaskItem";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './TaskList.css'
+import './TaskList.css';
+
 
 const TaskList = ({ tasks, onComplete, onDelete }) => {
   const incompleteTasks = tasks.filter(task => !task.completed);
@@ -23,7 +24,7 @@ const TaskList = ({ tasks, onComplete, onDelete }) => {
       return <div>No hay tareas disponibles</div>;
     }
     return (
-      <div className="pop">
+      <div>
       <div className="incomplete-tasks">
         <h2>Tareas incompletas:</h2>
         {incompleteTasks.map((task) => (
