@@ -38,12 +38,14 @@ function App() {
 
   return (
     <>
+      <h1>Lista de tareas</h1>
       <TaskList
         tasks={tasks}
         onComplete={handleComplete}
         onDelete={handleDelete}
       />
       <AddTask onAdd={handleAddTask}/>
+      <footer><strong>© Derechos reservados Mateo Capdevila Ontivero y Matias Sanchez.</strong></footer>
       
     </>
   );
